@@ -76,8 +76,6 @@ def find_accidents_on_route(start_point, end_point, max_distance):
 start_point = (33.77299, -84.39020)
 end_point = (33.790347, -84.391530)
 
-
-
 # Extract the integer values of the start point lat and lng
 start_lat = int(start_point[0]*bucket_length)
 start_lng = int(start_point[1]*bucket_length)
@@ -136,7 +134,7 @@ def map_view():
 
     # Return the map HTML and the text div
     map_html = map_accidents.get_root().render()
-    text_html = "<div style='width:33.33%;height:100%;float:right;text-align:center;'><h1>Hi Cassidy!</h1></div>"
+    text_html = "<div style='width:33.33%;height:100%;float:right;text-align:center;'><h1>Hi User!</h1><p>Wanna see live accident data?<br>...<br>I'm sorry but you won't find it here.</p></div>"
     return text_html + map_html
 
 if __name__ == '__main__':
