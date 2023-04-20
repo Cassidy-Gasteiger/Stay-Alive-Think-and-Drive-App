@@ -1,1 +1,67 @@
-{"segment_1": {"api": 7.62e-06, "route": [{"route_lat": 33.78252, "route_long": -84.39096}, {"route_lat": 33.78343, "route_long": -84.39099}]}, "segment_2": {"api": 1.243e-05, "route": [{"route_lat": 33.78438, "route_long": -84.39091}, {"route_lat": 33.78526, "route_long": -84.39087}]}, "segment_3": {"api": 1.375e-05, "route": [{"route_lat": 33.78612, "route_long": -84.39082}, {"route_lat": 33.78701, "route_long": -84.39077}]}, "segment_4": {"api": 3.31e-06, "route": [{"route_lat": 33.78794, "route_long": -84.39078}, {"route_lat": 33.78884, "route_long": -84.39077}]}, "segment_5": {"api": 1.74e-05, "route": [{"route_lat": 33.78974, "route_long": -84.39079}, {"route_lat": 33.79064, "route_long": -84.39077}]}}
+{
+    "segment_1": {
+        "api": 7.62e-06,
+        "route": [
+            {
+                "route_lat": 33.78252,
+                "route_long": -84.39096
+            },
+            {
+                "route_lat": 33.78343,
+                "route_long": -84.39099
+            }
+        ]
+    },
+    "segment_2": {
+        "api": 1.243e-05,
+        "route": [
+            {
+                "route_lat": 33.78438,
+                "route_long": -84.39091
+            },
+            {
+                "route_lat": 33.78526,
+                "route_long": -84.39087
+            }
+        ]
+    },
+    "segment_3": {
+        "api": 1.375e-05,
+        "route": [
+            {
+                "route_lat": 33.78612,
+                "route_long": -84.39082
+            },
+            {
+                "route_lat": 33.78701,
+                "route_long": -84.39077
+            }
+        ]
+    },
+    "segment_4": {
+        "api": 3.31e-06,
+        "route": [
+            {
+                "route_lat": 33.78794,
+                "route_long": -84.39078
+            },
+            {
+                "route_lat": 33.78884,
+                "route_long": -84.39077
+            }
+        ]
+    },
+    "segment_5": {
+        "api": 1.74e-05,
+        "route": [
+            {
+                "route_lat": 33.78974,
+                "route_long": -84.39079
+            },
+            {
+                "route_lat": 33.79064,
+                "route_long": -84.39077
+            }
+        ]
+    }
+}
