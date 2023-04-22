@@ -8,10 +8,10 @@ function odds_component(props) {
 
   return (
     <div>
-      <h1>Odds of Accident</h1>
+      <h1 style={{ fontWeight: 'bold' }}>Odds of Accident</h1>
       {/* <h2> How does weather impact your odds ? </h2> */}
       <span class="odds_description">
-        Odds of Accident base on realtime weather and bad weather for your
+        Odds of Accident based on realtime weather and bad weather for your
         current location
       </span>
       <div>
@@ -36,5 +36,3 @@ function odds_component_param(WrappedComponent, o1, o2) {
 }
 
 export default odds_component_param(odds_component, "1.1", "1.2");
-
-// return <Greeting name="world" />
