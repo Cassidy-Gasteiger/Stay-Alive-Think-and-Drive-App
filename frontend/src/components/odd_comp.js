@@ -11,8 +11,7 @@ function odds_component(props) {
       <h1 style={{ fontWeight: 'bold' }}>Odds of Accident</h1>
       {/* <h2>*Likelihood of being involved in an accident basis the current weather and average historical weather seen at your location. </h2> */}
       <span class="odds_description">
-        Odds of Accident based on realtime weather and bad weather for your
-        current location
+        The Odds number represent the likelihood of being involved in an accident basis the realtime weather and average historical weather seen at your location.
       </span>
       <div>
         <span> </span>
