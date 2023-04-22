@@ -149,7 +149,7 @@ def get_odds(lat,long, N= 250):
     weather_now_bad["prcp"] = weather_bad_5cols[3] * 25.4
     weather_now_bad["temp"] = (weather_bad_5cols[0]-32)/1.8
     weather_now_bad["pres"] = weather_bad_5cols[2] / 0.02952998057228486
-    weather_now_bad["wspd"] = weather_bad_5cols[4] / 0.02952998057228486
+    weather_now_bad["wspd"] = weather_bad_5cols[4] * 1.609
     print("Densities for weather bad")
     weather_odds_bad = weather_odds_helper(kde_pca_accidents, kde_pca_history, weather_now_bad,True, N)
     print(f"\nOdds for weather_now={weather_odds_normal:.5f} vs Odds for weather_bad={weather_odds_bad:.5f}")
