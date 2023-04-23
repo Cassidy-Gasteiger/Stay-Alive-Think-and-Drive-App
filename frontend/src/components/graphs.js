@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import RouteStatistics from './RouteStatistics';
-// import { BarChart, DensityChart } from './charts';
+import Histogram from './Histogram';
 
 function Graphs() {
+  const containerStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  };
+
   const titleStyle = {
     fontSize: '24px',
     fontWeight: 'bold',
@@ -20,10 +26,15 @@ function Graphs() {
   return (
     <div>
       <h1 style={titleStyle}>Route Statistics</h1>
+      <div style={containerStyle}>
+        <div style={{ marginRight: '50px' }}>
+          <RouteStatistics />
+      </div>
       <div>
-        <RouteStatistics />
+        <Histogram />
       </div>
     </div>
+  </div>
   );
 }
 

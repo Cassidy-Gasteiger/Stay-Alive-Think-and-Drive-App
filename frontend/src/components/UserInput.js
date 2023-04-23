@@ -5,7 +5,7 @@ import React, {useState } from 'react'
 var SL;
 var DN;
 
-function UserInput() {
+function UserInput({ onFormSubmit, isLoading }) {
   // create two state variables and two setter functions to update their values
   const [startingLocation, setStartingLocation] = useState('');
   const [destination, setDestination] = useState('');
@@ -22,7 +22,7 @@ function UserInput() {
     console.log(setDestination(event.target.value));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     SL = startingLocation;
 
@@ -39,6 +39,7 @@ function UserInput() {
     // });
 
     setIsSubmitted(true);
+    await onFormSubmit(startingLocation, destination);
   };
 
   const UserInputStyle = {
@@ -54,6 +55,12 @@ function UserInput() {
     gap: '10px',
     marginBottom: '20px',
     alignItmes: 'center',
+  };
+  const mapStyle = {
+    height: '100vh',
+    width: '50%',
+    float: 'left',
+    padding: '20px'
   };
 
   const buttonStyle = {
@@ -77,19 +84,20 @@ function UserInput() {
     <div style={UserInputStyle}>
       <form onSubmit={handleSubmit}>
         <div style={inputContainerStyle}>
-          <label htmlFor="startingLocation" style={inputLabelStyle}>Starting Location:</label>
+          <label htmlFor="startingLocation" style={inputLabelStyle}>Starting Point:</label>
           <input type="text" id="startingLocation" value={startingLocation} onChange={handleStartingLocationChange} /> 
         </div>
         <div style={inputContainerStyle}>
           <label htmlFor="destination" style={inputLabelStyle}>Destination:</label>
           <input type="text" id="destination" value={destination} onChange={handleDestinationChange} />
         </div>
-        <button type="submit" style={buttonStyle}>Submit</button>
+        <button type="submit" style={buttonStyle} disabled={isLoading}>Submit</button>
       </form>
       {isSubmitted && (
         <p>Route submitted!</p>
       )}
     </div>
+    
   );
 }
 

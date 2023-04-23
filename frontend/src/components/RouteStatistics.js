@@ -7,7 +7,7 @@ function RouteStatistics() {
     // make an API call to the backend to fetch totalAccidents
     // and set it using setTotalAccidents
     const fetchTotalAccidents = async () => {
-      const response = await fetch('/api/totalAccidents');
+      const response = await fetch('/api/sum_num_accidents');
       const data = await response.json();
       setTotalAccidents(data.totalAccidents);
     };
