@@ -47,7 +47,7 @@ function App() {
         <div style={mapStyle}><Map /></div>
         <div style={rightColumnStyle}>
           <div style={componentStyle}><UserInput /></div>
-          <div style={componentStyle}><Graphs /></div>
+          <div id = "graphs" style={componentStyle}><Graphs /></div>
           <div style={componentStyle}><OddComp /></div>
         </div>
       </div>

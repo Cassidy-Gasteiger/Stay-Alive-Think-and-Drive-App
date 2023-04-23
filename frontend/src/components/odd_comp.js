@@ -1,5 +1,6 @@
 import sunny_img from "./sunny.png";
 import thunder_img from "./thunder.png";
+import React, { useEffect, useRef, useState } from 'react';
 
 function odds_component(props) {
   const { odds_good, odds_bad } = props;
@@ -30,10 +31,26 @@ function odds_component(props) {
   );
 }
 
-function odds_component_param(WrappedComponent, o1, o2) {
+function odds_component_param(WrappedComponent,o1,o2) {
   return function (props) {
-    return <WrappedComponent {...props} odds_good={o1} odds_bad={o2} />;
+    const [odds1, set_odds1] = useState(null);
+    const [odds2, set_odds2] = useState(null);
+useEffect(() => {
+  fetch('logOdds_output.json')
+    .then(response => response.json())
+    .then(data => {
+      set_odds1(data.odds1);
+      set_odds2(data.odds2);
+    })
+    .catch(error => console.error(error));
+  }, []);
+  // console.log("odds check",odds);
+  console.log("odds check1",odds1);
+  console.log("odds check2",odds2);
+    return <WrappedComponent {...props} odds_good={odds1} odds_bad={odds2} />;
   };
 }
 
-export default odds_component_param(odds_component, "1.1", "1.2");
+
+
+export default odds_component_param(odds_component);

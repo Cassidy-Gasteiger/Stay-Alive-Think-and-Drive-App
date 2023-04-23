@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import RouteStatistics from './RouteStatistics';
-import Histogram from './Histogram';
+import Histogram from './histogram';
 
 function Graphs() {
   const containerStyle = {
@@ -26,11 +26,13 @@ function Graphs() {
   return (
     <div>
       <h1 style={titleStyle}>Route Statistics</h1>
-      <div style={containerStyle}>
-        <div style={{ marginRight: '50px' }}>
+      {/* <div style={containerStyle}>
+        <div id="num" style={{ marginRight: '50px' }}>
           <RouteStatistics />
       </div>
-      <div>
+      </div> */}
+      <div style={containerStyle}>
+      <div id = "hist">
         <Histogram />
       </div>
     </div>
