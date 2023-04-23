@@ -6,12 +6,19 @@ import Map from './components/Map';
 import OddComp from './components/odd_comp';
 import UserInput from './components/UserInput';
 import Graphs from './components/graphs';
+import LoadingSpinner from './components/LoadingSpinner'
 
 function App() {
   const titleStyle = {
     fontSize: '48px',
     fontWeight: 'bold',
     textAlign: 'center'
+  };
+
+  const subtitleStyle = {
+    fontSize: '20px',
+    textAlign: 'center',
+    padding: '20px'
   };
 
   const mapStyle = {
@@ -34,6 +41,8 @@ function App() {
   return (
     <div>
       <div style={titleStyle}>Stay Alive: Think and Drive</div>
+      <div style={subtitleStyle}>Enter a starting and ending address within the state of Georgia. This tool only displays data for accidents on 
+      major roads and highways.  </div>
       <div style={{ display: 'flex' }}>
         <div style={mapStyle}><Map /></div>
         <div style={rightColumnStyle}>
