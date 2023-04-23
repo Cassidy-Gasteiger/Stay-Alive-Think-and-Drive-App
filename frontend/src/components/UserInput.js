@@ -44,7 +44,7 @@ function UserInput({ onFormSubmit, isLoading }) {
 
   const UserInputStyle = {
     backgroundColor: 'lightgray',
-    height: '30vh',
+    height: '20vh',
     width: '100%',
     padding: '20px'
   };
@@ -53,7 +53,7 @@ function UserInput({ onFormSubmit, isLoading }) {
     display: 'flex',
     flexDirection: 'column',
     gap: '10px',
-    marginBottom: '20px',
+    marginBottom: '10px',
     alignItmes: 'center',
   };
   const mapStyle = {
