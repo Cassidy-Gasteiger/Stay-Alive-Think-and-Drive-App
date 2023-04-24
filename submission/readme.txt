@@ -1,8 +1,7 @@
 DESCRIPTION
 
 The Stay Alive Think and Drive App is a live app that can help you plan your journey by providing intelligent information about your planned travel route.
-You can type in any set of destination and source locations (within Georgia) to get a route along with color-coded segments according to the danger level (based on past accident data),
-odds of accident danger according to current weather conditions and some statistics.
+You can type in any set of destination and source locations (within Georgia) to get a route along with color-coded segments according to the danger level (based on past accident data), odds of accident danger according to current weather conditions and some statistics.
 
 INSTALLATION
 
@@ -16,13 +15,13 @@ A guide on how to install and set up the Stay Alive Think and Drive App
 
 3.) Go into the folder "node" inside the app_submission directory and then run npm install 
 
-4.) Move into "python_code" directory and Run "pip3 install -r requirements.txt"
+4.) Run "pip3 install -r python_code/requirements.txt" in order to install the necessary Python dependencies.
 
 5.) Run the command "node index.js." This will set up the backend on port 3000.
 
 6.) Go into the directory maps-app and run "npm i"
 
-7.) Run the command "npm start." This will render the front end on port 5000 of your system.
+7.) Run the command "npm start" in the same directory ("maps-app"). This will render the front end on port 5000 of your system.
 
 8.) Now type the link "http://127.0.0.1:5000/" on your browser, and press enter. You should be able to see the front-end interface on the above link.
 
